@@ -1,42 +1,44 @@
 import React from 'react'
 
-export const Content = () => {
+function Content() {
+  const base = "/taller2_correccion";
+
   const productos = [
     {
       id: 1,
-      nombre: "Auriculares Audio‑Technica ATH‑M20x",
+      nombre: "Auriculares Audio-Technica ATH-M20x",
       precio: 100000,
-      img: "/img/ATH-M20X_1.webp",
+      img: `${base}/img/ATH-M20X_1.webp`,
     },
     {
       id: 2,
       nombre: "Interfaz de audio Apollo Solo",
       precio: 1450000,
-      img: "/img/Apollo.jpg",
+      img: `${base}/img/Apollo.jpg`,
     },
     {
       id: 3,
       nombre: "Guitarra clasica Yamaha C40",
       precio: 1670,
-      img: "/img/guitarra.webp",
+      img: `${base}/img/guitarra.webp`,
     },
     {
       id: 4,
       nombre: "Parlantes KRK Rokit 5 G4",
       precio: 593,
-      img: "/img/KRK.jpg",
+      img: `${base}/img/KRK.jpg`,
     },
     {
       id: 5,
       nombre: "Akai MPK Mini MK3",
       precio: 350,
-      img: "/img/midi.jpg",
+      img: `${base}/img/midi.jpg`,
     },
     {
       id: 6,
       nombre: "Fender Frontman 10G",
       precio: 506,
-      img: "/img/amp.jpg",
+      img: `${base}/img/amp.jpg`,
     },
   ];
 
@@ -62,10 +64,10 @@ export const Content = () => {
                       ${p.precio} USD
                     </p>
                     <div className="d-flex gap-2 mt-auto">
-                      <button type="button" className="btn btn-warning btn-sm flex-fill">
+                      <button className="btn btn-warning btn-sm flex-fill">
                         Editar
                       </button>
-                      <button type="button" className="btn btn-danger btn-sm flex-fill">
+                      <button className="btn btn-danger btn-sm flex-fill">
                         Eliminar
                       </button>
                     </div>
@@ -77,7 +79,7 @@ export const Content = () => {
         </div>
 
         <div className="col-lg-4">
-          <div className="bg-white rounded shadow p-4" style={{ top: "150px" }}>
+          <div className="bg-white rounded shadow p-4">
             <h5 className="mb-3">Agregar producto</h5>
 
             <input className="form-control mb-2" placeholder="Nombre completo" />
@@ -97,10 +99,12 @@ export const Content = () => {
                 <input className="form-control mb-2" placeholder="CVV" />
               </div>
             </div>
-            <button className="btn btn-success w-100 mt-2"><i className="bi bi-cart-fill"></i>
+
+            <button className="btn btn-success w-100 mt-2">
               Agregar al carrito
             </button>
-            <button className="btn btn-danger w-100 mt-2"><i className="bi bi-trash-fill"></i>
+
+            <button className="btn btn-danger w-100 mt-2">
               limpiar carrito
             </button>
           </div>
@@ -110,3 +114,4 @@ export const Content = () => {
   )
 }
 
+export default Content;

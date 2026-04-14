@@ -1,7 +1,8 @@
-export function getImageUrl(person) {
-    return `https://i.imgur.com/${person.imageId}s.jpg`;
-}
+import React from "react";
 
+function getImageUrl(person) {
+  return `https://i.imgur.com/${person.imageId}s.jpg`;
+}
 
 function Avatar({ person, size }) {
   return (
@@ -20,26 +21,18 @@ function Props() {
     <div>
       <Avatar
         size={100}
-        person={{ 
-          name: 'Katsuko Saruhashi', 
-          imageId: 'YfeOqp2'
-        }}
+        person={{ name: "Katsuko Saruhashi", imageId: "YfeOqp2" }}
       />
       <Avatar
         size={80}
-        person={{
-          name: 'Aklilu Lemma', 
-          imageId: 'OKS67lh'
-        }}
+        person={{ name: "Aklilu Lemma", imageId: "OKS67lh" }}
       />
       <Avatar
         size={50}
-        person={{ 
-          name: 'Lin Lanying',
-          imageId: '1bX5QH6'
-        }}
+        person={{ name: "Lin Lanying", imageId: "1bX5QH6" }}
       />
     </div>
   );
 }
-export {Props}
+
+export default Props;
