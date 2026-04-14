@@ -1,13 +1,8 @@
-import { Header } from './features/layout/components/Header';
-import { Content } from './features/layout/components/Content';
-import { Footer } from './features/layout/components/Footer';
-import { Props } from './features/layout/components/Props';
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/taller2_correccion/">
 
       <Header />
 
